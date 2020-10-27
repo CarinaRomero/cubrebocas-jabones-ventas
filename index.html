@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="img/icono.jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+
+    <title>Carrito De Compras</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="#">CUBREBOCAS Y JABONES</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <img src="img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                    width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">Apartado De Compras</h1>
+            <p class="lead">Selecciona El Producto Que Desea Comprar</p>
+            <p clsdd="lead">Todos nuestros jabones estan empaquetados para regalo<br>
+             Estan hechos con gliserina de larga duracion y contienen escencia<br>
+             Los pedidos de cubrebocas y jabones seran entregados 3 dias despues de hacer el pedido en cualquier estacion del metro en un punto-medio<br>
+             En el 2do dia se llamara a la persona a travez del numero que proporciones o del correo electronico de donde nos comuniques para establecer la hora y la estacion para la entrega<br>
+             La entrega se dara el producto junto con un ticket con los prodcutos comprados y lo establecido con nuestra informacion proporcionada por las dudas que surgan de ustedes<br>
+             Los cubrebocas individuales se venderan desde 5 piezas hacia delante o en la compra de jabones<br>
+             Dudas y aclaraciones al siguiente numero: 55 2104 5993  vai WhatsApp</p>
+        </div>
+
+        <div class="container" id="lista-productos">
+            
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Cubrebocas (Individuales)</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/cubrebocas.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">S/. <span class="">15.00</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Filtro</li>
+                            <li>Tela Hospitalaria</li>
+                            <li>Tela De Diseño</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Cubrebocas (Docena)</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/cubrebocas1.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">S/. <span class="">145.00</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>12 cubrebocas distintos</li>
+                            <li>Filtros</li>
+                            <li>Tela Hospitalaria y Tela Diseñada</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Jabones Esferas Del Dragon</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/jabon.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">S/. <span class="">200.00</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>7 Esferas Del Dragon</li>
+                            <li>1 Goku De REgalo</li>
+                            <li>Contenido 200gr Por Cada Jabon</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Jabones Pokemon</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/jabon2.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">S/. <span class="">200.00</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>5 Pokebolas</li>
+                            <li>1 Pikachu</li>
+                            <li>Contenido 200gr Por Cada Jabon</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Jabones Estrella</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/jabon3.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">S/. <span class="">$150.00</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>10 Jabones De Estrella</li>
+                            <li>Contenido 100gr Por Cada Jabon</li>
+                            <li></li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Jabones Navidad</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/jabon4.jpg" class="card-img-top" widht="200" height="180">
+                        <h1 class="card-title pricing-card-title precio">S/. <span class="">100.00</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>5 Jabones</li>
+                            <li>Contenido 100gr Por Cada Jabon</li>
+                            <li></li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Jabones Diferente Figuras</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/jabon5.jpg" class="card-img-top" widht="200" height="230">
+                        <h1 class="card-title pricing-card-title precio">S/. <span class="">100.00</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Primer paquete 5 Pikachu´s</li>
+                            <li>Segundo paquete 5 Goku´s</li>
+                            <li>Tercer paquete 5 Corazones</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Jabones Futboll Americano</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/jabon6.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">S/. <span class="">100.00</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>2 o 3 jabones de balon</li>
+                            <li>2 o 3 de casco</li>
+                            <li>Paquete de 5 jabones con 100gr por cada jabon</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Jabones Deportes</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/jabon7.jpg" class="card-img-top" widht="200" height="230">
+                        <h1 class="card-title pricing-card-title precio">S/. 100.00 <span class=""100.00</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>5 jabones de balon futboll</li>
+                            <li>5 jabones de balon basquteball</li>
+                            <li>5 jabones de balon americano</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+ 
+                
+         </div>
+
+
+        </div>
+    </main>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+
+</body>
+
+</html>
